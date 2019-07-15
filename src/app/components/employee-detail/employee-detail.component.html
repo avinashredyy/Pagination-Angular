@@ -1,0 +1,7 @@
+<ul *ngFor="let employee of employees | paginate: { itemsPerPage: 10, currentPage: p }">
+    <li >
+        {{employee.name}} : {{employee.phone}}
+    </li>
+</ul>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
